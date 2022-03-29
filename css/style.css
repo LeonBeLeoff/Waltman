@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.headerBtn {
+    margin-top: 1vw;
+    height: 4vw;
+    width: 25vw;
+}
+
+.headerImg {
+    width: 6vw;
+}
