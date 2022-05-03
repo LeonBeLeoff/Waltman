@@ -23,6 +23,18 @@ font-family: 'Press Start 2P', cursive;
     filter: invert(100%);
 }
 
+.blackBackground {
+    background-color: black;
+}
+
+.white {
+    color: white;
+}
+
+.invert {
+    filter: invert(100%);
+}
+
 
 
 /* A n i m a t i o n s */
@@ -35,7 +47,7 @@ font-family: 'Press Start 2P', cursive;
 
 .initialFade {
     animation-name: initialFade;
-    animation-duration: 6s;
+    animation-duration: 4s;
 }
 
 /* 2 */
@@ -66,8 +78,8 @@ header {
     display: flex;
     justify-content: space-between;
     position: fixed;
+    background-color: white;
     width: 100%;
-    background: url("../img/wuv_block_2.png") repeat;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -181,13 +193,34 @@ h1 {
     background-color: white;
 }
 
+.siteButtonDark {
+    width: 20vw;
+    font-size: 2vw;
+    border: 0.25vw white solid;
+    background-color: black;
+    color: white;
+}
+
+.thisSiteDark {
+    background-color: black;
+    text-decoration: underline;
+}
+
+.siteButtonDark:hover { /* turns black when hover because of invert value */
+    background-color: black;
+}
+
 
 
 /* M a i n   c o n t e n t */
 
 h2 {
-   text-align: center;
-   font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h3 {
+    font-family: 'Press Start 2P', cursive;
 }
 
 .contentText {
@@ -217,15 +250,6 @@ h2 {
 
 
 
-/* A s i d e */
-
-.leftAside, .rightAside {
-    background: url("../img/wuv_block_2.png") repeat;
-    filter: brightness(70%);
-}
-
-
-
 /* F o o t e r */
 
 footer {
@@ -249,4 +273,38 @@ footer {
 
 .toTopButton:hover {
     height: 100%;
+}
+
+/* S i t e   s p e c i f i c   b a c k g r o u n d   i m a g e s */
+
+.siteOneHeaderBackground {
+    background: url("../img/no-cc-background6.gif") repeat;
+}
+
+.siteOneBackground {
+    background: url("../img/no-cc-background7.gif") repeat;
+    /*filter: opacity(50%);*/
+}
+
+.siteTwoHeaderBackground {
+    background: url("../img/wuv_block_9.png") repeat;
+}
+
+.siteTwoBackground {
+    background: url("../img/wuv_block_9.png") repeat;
+    filter: brightness(103%);
+}
+
+/* M u s i c */
+
+audio {
+    background-color: rgb(241, 243, 244);
+    border: 0.25vw black solid;
+    width: 100%;
+}
+
+.musicText {
+    margin: 0 0 1vw 0;
+    font-family: 'Press Start 2P', cursive;
+    color: dimgray;
 }
