@@ -7,7 +7,7 @@ font-family: 'Press Start 2P', cursive;
 
 
 
-/* G e n e r a l*/
+/* G e n e r a l */
 
 * {
     margin: 0;
@@ -15,12 +15,16 @@ font-family: 'Press Start 2P', cursive;
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background: url("../img/wuv_bg1.2.png");
+}
+
 .interactable {
     transition: 0.6s ease;
 }
 
 .interactable:hover {
-    filter: invert(100%);
+    filter: brightness(80%);
 }
 
 .blackBackground {
@@ -70,6 +74,17 @@ font-family: 'Press Start 2P', cursive;
     animation-duration: 2s;
 }
 
+/* 3 */
+@keyframes slide {
+    from {filter: opacity(0); height: 0;}
+    to {filter: opacity(1); height: 17vh;}
+}
+
+.initialFade {
+    animation-name: initialFade;
+    animation-duration: 4s;
+}
+
 
 
 /* H e a d e r */
@@ -78,41 +93,130 @@ header {
     display: flex;
     justify-content: space-between;
     position: fixed;
-    background-color: white;
+    background-color: dimgray;
     width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    box-shadow: 0 0 2em 0 rgba(0,0,0,0.5);
+    z-index: 2;
 }
 
 .headerBtn {
-    margin: 1.125vw 0.5vw 1.125vw 0.5vw;
-    height: 4vw;
+    margin: 1.25vh 0.5vw;
+    height: 8vh;
     width: 20vw;
     font-family: 'Press Start 2P', cursive;
     font-size: 1.5vw;
-    border: 0.25vw black solid;
-    background-color: white;
+    border: 0.6vh black solid;
+    background: rgb(200,0,0);
+    box-shadow: inset -0.25em 0 rgb(120,0,0), inset 0 0.25em rgb(255,0,0), inset 0 -0.25em rgb(120,0,0), inset 0.25em 0 rgb(255,0,0), 0.25em 0.25em rgb(0 0 0 / 25%);
+    color: white;
+    text-shadow: 0.15em 0.15em 0 rgb(0 0 0 / 25%);
+}
+
+.alternativeHeaderBtn {
+    margin: 1.25vh 0.5vw;
+    height: 8vh;
+    width: 30vw;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 6vw;
+    border: 0.6vh black solid;
+    background: rgb(200,0,0);
+    box-shadow: inset -0.25em 0 rgb(120,0,0), inset 0 0.25em rgb(255,0,0), inset 0 -0.25em rgb(120,0,0), inset 0.25em 0 rgb(255,0,0), 0.25em 0.25em rgb(0 0 0 / 25%);
+    color: white;
+    text-shadow: 0.15em 0.15em 0 rgb(0 0 0 / 25%);
+    display: none;
 }
 
 .headerBtn:hover {
-    height: 5vw;
     width: 25vw;
-    margin: 0.625vw 0.5vw 0.625vw 0.5vw;
 }
 
 .headerImg {
-    height: 6vw;
-    margin: 0.25vw 2vw 0.25vw 2vw;
+    height: 10vh;
+    margin: 0.25vh 2vw;
+    filter: drop-shadow(0.25em 0.25em rgb(0 0 0 / 25%));
 }
 
 .headerImg:hover {
-    height: 6.5vw;
-    margin: 0 1.75vw 0 1.75vw;
+    height: 10.5vh;
+    margin: 0 2vw;
 }
 
 
 
-/* T i t l e*/
+/* D r o p d o w n s */
+
+/* The container <div> - needed to position the dropdown content */
+.menuDropdown, .navDropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.menuContent, .navContent {
+    width: 100%;
+    height: 17vh;
+    position: fixed;
+    background-color: darkgray;
+    z-index: 1;
+    top: 10.5vh;
+    display: none;
+}
+
+.menuContent span, .navContent span {
+    position: fixed;
+    margin: 1vw 0 0 2.5vw;
+    font-family: 'Press Start 2P', cursive;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5vh 0 0 0;
+}
+
+/* Links inside the dropdown */
+.menuContent button {
+    font-family: 'Press Start 2P', cursive;
+    width: 30vw;
+    height: 10vh;
+    text-decoration: none;
+    font-size: 2.5vw;
+    border: 0.6vh black solid;
+    color: white;
+    background: rgb(200,200,200);
+    box-shadow: inset -0.25em 0 rgb(120,120,120), inset 0 0.25em rgb(255,255,255), inset 0 -0.25em rgb(120,120,120), inset 0.25em 0 rgb(255,255,255), 0.25em 0.25em rgb(0 0 0 / 25%);
+    text-shadow: 0.15em 0.15em 0 rgb(0 0 0 / 25%);
+}
+
+.navContent button {
+    font-family: 'Press Start 2P', cursive;
+    width: 30vw;
+    height: 10vh;
+    text-decoration: none;
+    font-size: 2.5vw;
+    border: 0.6vh black solid;
+    color: white;
+    background: rgb(200,0,0);
+    box-shadow: inset -0.25em 0 rgb(120,0,0), inset 0 0.25em rgb(255,0,0), inset 0 -0.25em rgb(120,0,0), inset 0.25em 0 rgb(255,0,0), 0.25em 0.25em rgb(0 0 0 / 25%);
+    text-shadow: 0.15em 0.15em 0 rgb(0 0 0 / 25%);
+}
+
+/* Lists inside the dropdown */
+.menuContent li, .navContent li {
+    list-style: none;
+    display: inline;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+    animation-name: slide;
+    animation-duration: 0.5s;
+}
+
+
+
+/* T i t l e */
 
 h1 {
     font-family: 'Press Start 2P', cursive;
@@ -193,23 +297,6 @@ h1 {
     background-color: white;
 }
 
-.siteButtonDark {
-    width: 20vw;
-    font-size: 2vw;
-    border: 0.25vw white solid;
-    background-color: black;
-    color: white;
-}
-
-.thisSiteDark {
-    background-color: black;
-    text-decoration: underline;
-}
-
-.siteButtonDark:hover { /* turns black when hover because of invert value */
-    background-color: black;
-}
-
 
 
 /* M a i n   c o n t e n t */
@@ -217,6 +304,7 @@ h1 {
 h2 {
     text-align: center;
     font-family: 'Press Start 2P', cursive;
+    font-size: 1.8vw;
 }
 
 h3 {
@@ -233,6 +321,11 @@ h3 {
     text-align: center;
 }
 
+.topImage {
+    width: 100%;
+    margin: 0 0 1em 0;
+}
+
 .bottomImage {
     width: 100%;
     margin: 1em 0 0 0;
@@ -246,6 +339,14 @@ h3 {
     float: right;
     width: 50%;
     margin: 0 0 0 2em;
+}
+
+
+
+/* A s i d e */
+
+aside {
+    background: url("../img/wuv_bg1.1.png");
 }
 
 
@@ -275,6 +376,8 @@ footer {
     height: 100%;
 }
 
+
+
 /* S i t e   s p e c i f i c   b a c k g r o u n d   i m a g e s */
 
 .siteOneHeaderBackground {
@@ -283,7 +386,6 @@ footer {
 
 .siteOneBackground {
     background: url("../img/no-cc-background7.gif") repeat;
-    /*filter: opacity(50%);*/
 }
 
 .siteTwoHeaderBackground {
@@ -295,6 +397,8 @@ footer {
     filter: brightness(103%);
 }
 
+
+
 /* M u s i c */
 
 audio {
@@ -304,7 +408,71 @@ audio {
 }
 
 .musicText {
-    margin: 0 0 1vw 0;
+    margin: 0 0 1vh 0;
+    font-size: 1.5vw;
     font-family: 'Press Start 2P', cursive;
     color: dimgray;
 }
+
+@media (max-width:540px) {
+    .hiddenWhenSmall {
+        display: none;
+    }
+
+    .shownWhenSmall {
+        display: inline;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    h3 {
+        font-size: 5vw;
+    }
+
+    .contentText {
+        font-size: 5vw;
+    }
+
+    .marginSide {
+        margin: 0 1vw;
+    }
+
+    .siteButton {
+        width: 27vw;
+        font-size: 7vw;
+    }
+
+
+
+    /* S i t e   t w o */
+
+    #tip1 {
+        width: 100%;
+        margin: 0 0 1em 0;
+        float: none;
+    }
+
+    #tip3 {
+        width: 100%;
+        margin: 0 0 1em 0;
+        float: none;
+    }
+
+
+
+    /* S i t e   t w o */
+
+    .musicText {
+        font-size: 5vw;
+        line-height: 3vh;
+    }
+}
+
+@media (min-width:540px) {
+    .hiddenWhenBig {
+        display: none;
+    }
+}
+

@@ -12,28 +12,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Press+Start+2P&display=swap" rel="stylesheet">
   </head>
-  <body class="" id="top">
+  <body id="top">
     <div class="container">
 
 
 
       <!-- H e a d e r -->
 
-      <header class="div1 ">
-        <img src="./img/black_square.jpeg" alt="placeholder" class="headerImg interactable" onclick="location.href='./index.html'" onkeypress="location.href='./index.html'"> <!-- Logo -->
+      <header class="div1">
+        <img src="./img/wuv_logo_3.png" alt="placeholder" class="headerImg interactable" onclick="location.href='./index.html'" onkeypress="location.href='./index.html'"> <!-- Logo -->
         <div>
-          <button class="headerBtn interactable" onclick="location.href='#mainContent'" onkeypress="location.href='#mainContent'">Main content</button> <!-- Button 1 -->
-          <button class="headerBtn interactable" onclick="window.open('https://waltman.ga/')" onkeypress="window.open('https://waltman.ga/')">Play now</button> <!-- Button 2 -->
-          <button class="headerBtn interactable" onclick="location.href='./sitelist.html'" onkeypress="location.href='./sitlelist.html'">Site list</button> <!-- Button 3 -->
+          <button class="headerBtn interactable hiddenWhenSmall" onclick="location.href='#mainContent'" onkeypress="location.href='#mainContent'">Main content</button> <!-- Button 1 -->
+          <button class="headerBtn interactable hiddenWhenSmall" onclick="window.open('https://waltman.ga/')" onkeypress="window.open('https://waltman.ga/')">Play now</button> <!-- Button 2 -->
+          <button class="headerBtn interactable hiddenWhenSmall" onclick="location.href='#siteList'" onkeypress="location.href='#siteList'">Site list</button> <!-- Button 3 -->
+          <button class="alternativeHeaderBtn interactable shownWhenSmall navBtn" onclick="navFunction()" onkeypress="navFunction()">▼</button> <!-- Button 3 -->
         </div>
-        <img src="./img/black_square.jpeg" alt="placeholder" class="headerImg interactable"> <!-- Menu button -->
+        <img src="./img/wuv_menu_1.png" alt="placeholder" class="headerImg interactable menuBtn" onclick="menuFunction()" onkeypress="menuFunction()"> <!-- Menu button -->
       </header>
+
+
+
+      <!-- D r o p d o w n   1 -->
+
+      <div id="myNav" class="navContent hiddenWhenBig">
+        <span>Site navigation</span>
+        <ul>
+          <li><button onclick="location.href='#mainContent'" onkeypress="location.href='#mainContent'">Main content</button></li>
+          <li><button onclick="window.open('https://waltman.ga/')" onkeypress="window.open('https://waltman.ga/')">Play now</button></li>
+          <li><button onclick="location.href='#siteList'" onkeypress="location.href='#siteList'">Site list</button></li>
+        </ul>
+      </div>
+
+
+
+      <!-- D r o p d o w n   2 -->
+
+      <div id="myMenu" class="menuContent">
+        <span>Menu</span>
+        <ul>
+          <li><button onclick="location.href='./index.html'" onkeypress="location.href='./index.html'">Main</button></li>
+          <li><button onclick="location.href='./tips.html'" onkeypress="location.href='./tips.html'">Tips</button></li>
+          <li><button onclick="location.href='./music.html'" onkeypress="location.href='./music.html'">Music</button></li>
+        </ul>
+      </div>
 
 
 
       <!-- T i t l e -->
 
-      <section class="div2 initialFade">
+      <section id="siteList" class="div2 initialFade white">
         <h1>Music</h1>
       </section>
 
@@ -54,36 +81,39 @@
       <!-- M a i n   c o n t e n t -->
 
       <section class="div4 initialFade">
-        <h3>#1 ━━━━━━━━━━━━</h3>
+        <h3 class="white">#1 ━━━━━━━━━━━━</h3>
       </section>
 
       <article class="div5 initialFade">
-        <p class="musicText">cp419 - Never going to give you down</p>
+        <p class="musicText">cp419 - Rarely gonna provide you arise</p>
         <audio controls>
-          <source src="./img/music/never_going_to_give_you_down.m4a" type = "audio/mpeg">
+          <source src="./img/music/never_going_to_give_you_down.m4a" type="audio/mpeg">
         </audio>
+        <p class="contentText">Rarely gonna provide you arise. Rarely gonna provide you arise. Rarely gonna provide you arise. Rarely gonna provide you arise. Rarely gonna provide you arise. Rarely gonna provide you arise</p>
       </article>
 
       <section class="div6">
-        <h3>#2 ━━━━━━━━━━━━</h3>
+        <h3 class="white">#2 ━━━━━━━━━━━━</h3>
       </section>
 
       <article class="div7">
-        <p class="musicText" >cp419 - Never going to give you down</p>
+        <p class="musicText" >cp419 - Awake Slowwalk</p>
         <audio controls>
-          <source src="./img/music/never_going_to_give_you_down.m4a" type = "audio/mpeg">
+          <source src="./img/music/never_going_to_give_you_down.m4a" type="audio/mpeg">
         </audio>
+        <p class="contentText">Rarely gonna provide you arise. Rarely gonna provide you arise. Rarely gonna provide you arise. Rarely gonna provide you arise. Rarely gonna provide you arise. Rarely gonna provide you arise</p>
       </article>
 
       <section class="div8">
-        <h3>#3 ━━━━━━━━━━━━</h3>
+        <h3 class="white">#3 ━━━━━━━━━━━━</h3>
       </section>
 
       <article class="div9">
-        <p class="musicText">cp419 - Never going to give you down</p>
+        <p class="musicText">cp419 - I don't want it that way</p>
         <audio controls>
-          <source src="./img/music/never_going_to_give_you_down.m4a" type = "audio/mpeg">
+          <source src="./img/music/never_going_to_give_you_down.m4a" type="audio/mpeg">
         </audio>
+        <p class="contentText">Rarely gonna provide you arise. Rarely gonna provide you arise. Rarely gonna provide you arise. Rarely gonna provide you arise. Rarely gonna provide you arise. Rarely gonna provide you arise</p>
       </article>
 
       <footer class="div10">
@@ -94,10 +124,10 @@
 
       <!-- A s i d e -->
 
-      <aside class="leftAside "></aside>
-      <aside class="rightAside "></aside>
+      <aside class="leftAside hiddenWhenSmall"></aside>
+      <aside class="rightAside hiddenWhenSmall"></aside>
 
     </div>
-    <script src="js/main.js"></script>
+    <script src="js/secondary.js"></script>
   </body>
 </html>

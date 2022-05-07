@@ -1,7 +1,7 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1.5fr 1.5fr 2fr 0.5fr 3fr 0.5fr 3fr 0.5fr 3fr 1fr;
+    grid-template-rows: 1.5fr 1.5fr 2fr 0.5fr 4fr 0.5fr 4fr 0.5fr 4fr 1fr;
     grid-gap: 2vw;
 }
 
@@ -63,4 +63,73 @@
 .rightAside {
     grid-column: 5/6;
     grid-row: 1/11;
+}
+
+@media (max-width:540px) {
+    .container {
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 1fr 1fr 1fr 0.1fr;
+        grid-template-rows: 3fr 1fr 3fr 0.5fr 15fr 0.5fr 15fr 0.5fr 15fr 1.5fr;
+        grid-gap: 6vw;
+    }
+
+    .div1 {
+        grid-column: 2/6;
+        grid-row: 1/2;
+    }
+
+    .div2 {
+        grid-column: 2/6;
+        grid-row: 2/3;
+    }
+
+    .div3 {
+        grid-column: 2/6;
+        grid-row: 3/4;
+    }
+
+    .div4 {
+        grid-column: 2/6;
+        grid-row: 4/5;
+    }
+
+    .div5 {
+        grid-column: 2/6;
+        grid-row: 5/6;
+    }
+
+    .div6 {
+        grid-column: 2/6;
+        grid-row: 6/7;
+    }
+
+    .div7 {
+        grid-column: 2/6;
+        grid-row: 7/8;
+    }
+
+    .div8 {
+        grid-column: 2/6;
+        grid-row: 8/9;
+    }
+
+    .div9 {
+        grid-column: 2/6;
+        grid-row: 9/10;
+    }
+
+    .div10 {
+        grid-column: 2/6;
+        grid-row: 10/11;
+    }
+
+    .leftAside {
+        grid-column: 0/0;
+        grid-row: 1/10;
+    }
+
+    .rightAside {
+        grid-column: 0/0;
+        grid-row: 1/10;
+    }
 }
