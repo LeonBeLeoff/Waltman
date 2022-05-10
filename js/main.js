@@ -34,6 +34,7 @@ function showSlides(n) {
 toggle between hiding and showing the dropdown content */
 function menuFunction() {
     document.getElementById("myMenu").classList.toggle("show");
+    document.getElementById("mainHeaderBtn").classList.toggle("mainHeaderBtn");
 }
 
 // Nav drop down ----------------------------------------
@@ -42,6 +43,7 @@ function menuFunction() {
 toggle between hiding and showing the dropdown content */
 function navFunction() {
     document.getElementById("myNav").classList.toggle("show");
+    document.getElementById("altHeaderBtn").classList.toggle("altHeaderBtn");
 }
 
 window.onclick = function(event) {
@@ -64,6 +66,28 @@ window.onclick = function(event) {
             var openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('show')) {
                 openDropdown.classList.remove('show');
+            }
+        }
+    }
+    // Reverts the appearance of the button if the user clicks outside of it
+    if (!event.target.matches('.mainHeaderBtn')) {
+        var mainHeaderBtns = document.getElementsByClassName("mainHeaderBtn");
+        var i;
+        for (i = 0; i < mainHeaderBtns.length; i++) {
+            var openMainHeaderBtn = mainHeaderBtns[i];
+            if (openMainHeaderBtn.classList.contains('mainHeaderBtn')) {
+                openMainHeaderBtn.classList.remove('mainHeaderBtn');
+            }
+        }
+    }
+    // Reverts the appearance of the button if the user clicks outside of it
+    if (!event.target.matches('.altHeaderBtn')) {
+        var altHeaderBtns = document.getElementsByClassName("altHeaderBtn");
+        var i;
+        for (i = 0; i < altHeaderBtns.length; i++) {
+            var openAltHeaderBtn = altHeaderBtns[i];
+            if (openAltHeaderBtn.classList.contains('altHeaderBtn')) {
+                openAltHeaderBtn.classList.remove('altHeaderBtn');
             }
         }
     }

@@ -137,11 +137,22 @@ header {
 }
 
 .headerImg:hover {
-    height: 10.5vh;
-    margin: 0 2vw;
+    filter: brightness(80%) drop-shadow(0.25em 0.25em rgb(0 0 0 / 25%));
 }
 
 
+
+/* H e a d e r   i n t e r a c t a b l e   j a v a s c r i p t */
+
+/* Gets applied to the main header button to the right side when dropdown is shown*/
+.mainHeaderBtn {
+    filter: brightness(80%) drop-shadow(0.25em 0.25em rgb(0 0 0 / 25%));
+}
+
+/* Gets applied to the alternative header button in the middle att small screen size when dropdown is shown*/
+.altHeaderBtn {
+    filter: brightness(80%);
+}
 
 /* D r o p d o w n s */
 
@@ -192,7 +203,6 @@ ul {
     font-family: 'Press Start 2P', cursive;
     width: 30vw;
     height: 10vh;
-    text-decoration: none;
     font-size: 2.5vw;
     border: 0.6vh black solid;
     color: white;
@@ -343,14 +353,6 @@ h3 {
 
 
 
-/* A s i d e */
-
-aside {
-    background: url("../img/wuv_bg1.1.png");
-}
-
-
-
 /* F o o t e r */
 
 footer {
@@ -366,14 +368,34 @@ footer {
     margin: auto;
     width: 30vw;
     height: 70%;
-    font-size: 2vw;
+    font-size: 150%;
     font-family: 'Press Start 2P', cursive;
-    border: 0.5vw black solid;
+    border: 1vh black solid;
     background-color: white;
 }
 
 .toTopButton:hover {
     height: 100%;
+}
+
+.nonJavascriptBtn {
+    font-size: 2vw;
+    height: 3vw;
+    color: lightskyblue;
+    background-color: black;
+    border: white 0.5vw solid;
+    border-left-width: 0;
+    padding: 0.5vw;
+    position: absolute;
+    bottom: 15%;
+}
+
+
+
+/* A s i d e */
+
+aside {
+    background: url("../img/night_sky_1.gif");
 }
 
 
@@ -414,6 +436,21 @@ audio {
     color: dimgray;
 }
 
+/* S i t e   l i s t   s i t e */
+
+li a {
+    font-size: 2vh;
+    height: 3vh;
+    color: lightskyblue;
+    background-color: black;
+    border: white 0.5vw solid;
+    padding: 1vw 5vw 1vw 5vw;
+}
+
+li {
+    list-style: none;
+}
+
 @media (max-width:540px) {
     .hiddenWhenSmall {
         display: none;
@@ -444,9 +481,28 @@ audio {
         font-size: 7vw;
     }
 
+    .nonJavascriptBtn {
+        font-size: 2vh;
+        height: 3vh;
+        width: 100%;
+        border-bottom-width: 0;
+        bottom: 0;
+        z-index: 1;
+        text-align: center;
+    }
+
+    .toTopButton {
+        margin: 0 auto 100% auto;
+        border: 2vw black solid;
+    }
+
+    .subheading {
+        font-size: 4vw;
+    }
 
 
-    /* S i t e   t w o */
+
+    /* T i p s   s i t e */
 
     #tip1 {
         width: 100%;
@@ -460,13 +516,17 @@ audio {
         float: none;
     }
 
-
-
-    /* S i t e   t w o */
-
     .musicText {
         font-size: 5vw;
         line-height: 3vh;
+    }
+
+
+
+    /* S i t e   l i s t   s i t e */
+
+    li a {
+        font-size: 5vw;
     }
 }
 
