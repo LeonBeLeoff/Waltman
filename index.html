@@ -34,9 +34,8 @@
       <!-- D r o p d o w n   1 -->
 
       <div id="myNav" class="navContent hiddenWhenBig">
-        <span>Site navigation</span>
         <ul>
-          <li><button onclick="location.href='#mainContent'" onkeypress="location.href='#mainContent'">Main content</button></li>
+          <li><button onclick="location.href='#mainContent'" onkeypress="location.href='#mainContent'">Content</button></li>
           <li><button onclick="window.open('https://waltman.ga/')" onkeypress="window.open('https://waltman.ga/')">Play now</button></li>
           <li><button onclick="location.href='#siteList'" onkeypress="location.href='#siteList'">Site list</button></li>
         </ul>
@@ -47,7 +46,6 @@
       <!-- D r o p d o w n   2 -->
 
       <div id="myMenu" class="menuContent">
-        <span>Menu</span>
         <ul>
           <li><button onclick="location.href='./index.html'" onkeypress="location.href='./index.html'">Main</button></li>
           <li><button onclick="location.href='./tips.html'" onkeypress="location.href='./tips.html'">Tips</button></li>
@@ -61,7 +59,7 @@
 
       <section class="div2 initialFade">
         <h1 class="white">Waltman</h1>
-        <p class="subheading invert">Probably the best game never made</p>
+        <p class="subheading">Probably the best game never made</p>
       </section>
 
 
@@ -72,29 +70,31 @@
         <div class="slideshow">
 
           <div class="mySlides fade"> <!-- Slide 1 -->
-            <img src="./img/no-cc-background4.png" alt="No image found" class="slideImg"> <!-- Image 1 -->
+            <img src="./img/waltman_patch_2.png" alt="No image found" class="slideImg"> <!-- Image 1 -->
+            <p class="slideText">Waltman patch 2.0</p>
           </div>
 
           <div class="mySlides fade"> <!-- Slide 2 -->
-            <img src="./img/no-cc-background5.webp" alt="No image found" class="slideImg"> <!-- Image 2 -->
+            <img src="./img/console_1.png" alt="No image found" class="slideImg"> <!-- Image 2 -->
+            <p class="slideText">Intense gamer zone</p>
           </div>
 
           <div class="mySlides fade"> <!-- Slide 3 -->
-            <img src="./img/no-cc-background3.jpeg" alt="No image found" class="slideImg"> <!-- Image 3 -->
+            <img src="./img/hamburger_1.png" alt="No image found" class="slideImg"> <!-- Image 3 -->
+            <p class="slideText">Check out WokDonald's new WokSystemicOppression™</p>
           </div>
 
           <!-- Buttons -->
           <a class="prev interactable" href="#slide" onclick="plusSlides(-1)">❮</a> <!-- Previous Button -->
           <a class="next interactable" href="#slide" onclick="plusSlides(1)">❯</a> <!-- Next Button -->
         </div>
-        <br>
       </article>
 
 
 
       <!-- S i t e   l i s t -->
 
-      <nav id="mainContent" class="div4">
+      <nav id="mainContent" class="div4 initialFade">
         <div class="siteList">
           <button class="siteButton thisSite interactable" onclick="location.href='./index.html'" onkeypress="location.href='./index.html'">Main</button>
           <button class="siteButton interactable" onclick="location.href='./tips.html'" onkeypress="location.href='./tips.html'">Tips</button>
@@ -112,8 +112,8 @@
       </section>
 
       <article class="div6">
-        <p class="topText contentText invert">After the industrial revolution, it is fair to say that, humankind as a civilization has advanced far beyond any of our founding fathers' and mothers’ expectations. However, even the most naive could not anticipate that such potential hid inside us, <em>among us</em>. Waltman™ is the epitome of fortnite gaming, absolutely radiating <em>unhinged gamer energy</em>.</p>
-        <img src="./img/no-cc-background1.webp" alt="placeholder" class="bottomImage">
+        <p class="topText contentText">After the industrial revolution, it is fair to say that, humankind as a civilization has advanced far beyond any of our founding fathers' and mothers’ expectations. However, even the most naive could not anticipate that such potential hid inside us, <em>among us</em>. Waltman™ is the epitome of fortnite gaming, absolutely radiating <em>unhinged gamer energy</em>.</p>
+        <img src="./img/jesus.png" alt="placeholder" class="bottomImage">
       </article>
 
       <section class="div7 white">
@@ -122,8 +122,8 @@
       </section>
 
       <article class="div8">
-        <img src="./img/no-cc-background2.jpeg" alt="placeholder" class="rightImage">
-        <p class="leftText contentText invert">In early November 1989, the Berlin Wall fell and as a result, would mark the beginning of THE PROJECT. It was precisely at this point the wheels began turning, the cogs moving, and the mills spinning. In opposition to what Oppenheimer once said, “Now I am become Death, the destroyer of worlds”, THE PROJECT simply cannot be destroyed.</p>
+        <img src="./img/julius_caesar.png" alt="placeholder" class="rightImage">
+        <p class="leftText contentText">In early November 1989, the Berlin Wall fell and as a result, would mark the beginning of THE PROJECT. It was precisely at this point the wheels began turning, the cogs moving, and the mills spinning. In opposition to what Oppenheimer once said, “Now I am become Death, the destroyer of worlds”, THE PROJECT simply cannot be destroyed.</p>
       </article>
 
 
@@ -131,7 +131,7 @@
       <!-- F o o t e r -->
 
       <footer class="div9">
-        <a class="nonJavascriptBtn" href="./sitelist.html">Javascript not working?</a>
+        <a id="nonJavascriptBtn" class="nonJavascriptBtn" href="./sitelist.html">Javascript not working?</a>
         <button class="toTopButton interactable" onclick="location.href='#top'" onkeypress="location.href='#top'">Top</button>
       </footer>
 

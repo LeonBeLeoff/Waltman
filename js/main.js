@@ -92,3 +92,7 @@ window.onclick = function(event) {
         }
     }
 }
+
+// If javascript works the button will be deleted
+const element = document.getElementById("nonJavascriptBtn");
+element.remove();

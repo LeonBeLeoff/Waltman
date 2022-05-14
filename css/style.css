@@ -21,6 +21,7 @@ body {
 
 .interactable {
     transition: 0.6s ease;
+    cursor: pointer;
 }
 
 .interactable:hover {
@@ -77,7 +78,7 @@ body {
 /* 3 */
 @keyframes slide {
     from {filter: opacity(0); height: 0;}
-    to {filter: opacity(1); height: 17vh;}
+    to {filter: opacity(1); height: 14vh;}
 }
 
 .initialFade {
@@ -93,51 +94,53 @@ header {
     display: flex;
     justify-content: space-between;
     position: fixed;
-    background-color: dimgray;
+    background: rgb(100,100,100);
+    box-shadow: inset -0.5vw 0 rgb(50,50,50), inset 0 0.5vw rgb(155,155,155), inset 0 -0.5vw rgb(50,50,50), inset 0.5vw 0 rgb(155,155,155), 0 0.5vw rgb(0 0 0 / 25%);
     width: 100%;
-    box-shadow: 0 0 2em 0 rgba(0,0,0,0.5);
     z-index: 2;
 }
 
 .headerBtn {
-    margin: 1.25vh 0.5vw;
+    margin: 2.25vh 0.5vw;
     height: 8vh;
     width: 20vw;
     font-family: 'Press Start 2P', cursive;
     font-size: 1.5vw;
-    border: 0.6vh black solid;
+    border: 0.7vh black solid;
     background: rgb(200,0,0);
-    box-shadow: inset -0.25em 0 rgb(120,0,0), inset 0 0.25em rgb(255,0,0), inset 0 -0.25em rgb(120,0,0), inset 0.25em 0 rgb(255,0,0), 0.25em 0.25em rgb(0 0 0 / 25%);
+    box-shadow: inset -0.5vw 0 rgb(120,0,0), inset 0 0.5vw rgb(255,0,0), inset 0 -0.5vw rgb(120,0,0), inset 0.5vw 0 rgb(255,0,0), 0.5vw 0.5vw rgb(0 0 0 / 25%);
     color: white;
-    text-shadow: 0.15em 0.15em 0 rgb(0 0 0 / 25%);
+    text-shadow: 0.25vw 0.25vw 0 rgb(0 0 0 / 25%);
 }
 
 .alternativeHeaderBtn {
-    margin: 1.25vh 0.5vw;
+    margin: 2.25vh 0.5vw;
     height: 8vh;
     width: 30vw;
     font-family: 'Press Start 2P', cursive;
     font-size: 6vw;
     border: 0.6vh black solid;
     background: rgb(200,0,0);
-    box-shadow: inset -0.25em 0 rgb(120,0,0), inset 0 0.25em rgb(255,0,0), inset 0 -0.25em rgb(120,0,0), inset 0.25em 0 rgb(255,0,0), 0.25em 0.25em rgb(0 0 0 / 25%);
+    box-shadow: inset -0.5vw 0 rgb(120,0,0), inset 0 0.5vw rgb(255,0,0), inset 0 -0.5vw rgb(120,0,0), inset 0.5vw 0 rgb(255,0,0), 0.5vw 0.5vw rgb(0 0 0 / 25%);
     color: white;
-    text-shadow: 0.15em 0.15em 0 rgb(0 0 0 / 25%);
+    text-shadow: 0.25vw 0.25vw 0 rgb(0 0 0 / 25%);
     display: none;
 }
 
 .headerBtn:hover {
     width: 25vw;
+    border: 0.6vh white solid;
 }
 
 .headerImg {
     height: 10vh;
-    margin: 0.25vh 2vw;
-    filter: drop-shadow(0.25em 0.25em rgb(0 0 0 / 25%));
+    margin: 1.25vh 2vw;
+    filter: drop-shadow(0.5vw 0.5vw rgb(0 0 0 / 25%));
+    cursor: pointer;
 }
 
 .headerImg:hover {
-    filter: brightness(80%) drop-shadow(0.25em 0.25em rgb(0 0 0 / 25%));
+    filter: brightness(80%) drop-shadow(0.5vw 0.5vw rgb(0 0 0 / 25%));
 }
 
 
@@ -146,7 +149,7 @@ header {
 
 /* Gets applied to the main header button to the right side when dropdown is shown*/
 .mainHeaderBtn {
-    filter: brightness(80%) drop-shadow(0.25em 0.25em rgb(0 0 0 / 25%));
+    filter: brightness(80%) drop-shadow(0.5vw 0.5vw rgb(0 0 0 / 25%));
 }
 
 /* Gets applied to the alternative header button in the middle att small screen size when dropdown is shown*/
@@ -165,24 +168,18 @@ header {
 /* Dropdown Content (Hidden by Default) */
 .menuContent, .navContent {
     width: 100%;
-    height: 17vh;
+    height: 14vh;
     position: fixed;
     background-color: darkgray;
     z-index: 1;
-    top: 10.5vh;
+    top: 12.5vh;
     display: none;
-}
-
-.menuContent span, .navContent span {
-    position: fixed;
-    margin: 1vw 0 0 2.5vw;
-    font-family: 'Press Start 2P', cursive;
 }
 
 ul {
     display: flex;
     justify-content: space-evenly;
-    margin: 5vh 0 0 0;
+    margin: 2vh 0 0 0;
 }
 
 /* Links inside the dropdown */
@@ -190,13 +187,12 @@ ul {
     font-family: 'Press Start 2P', cursive;
     width: 30vw;
     height: 10vh;
-    text-decoration: none;
     font-size: 2.5vw;
     border: 0.6vh black solid;
     color: white;
     background: rgb(200,200,200);
-    box-shadow: inset -0.25em 0 rgb(120,120,120), inset 0 0.25em rgb(255,255,255), inset 0 -0.25em rgb(120,120,120), inset 0.25em 0 rgb(255,255,255), 0.25em 0.25em rgb(0 0 0 / 25%);
-    text-shadow: 0.15em 0.15em 0 rgb(0 0 0 / 25%);
+    box-shadow: inset -0.5vw 0 rgb(120,120,120), inset 0 0.5vw rgb(255,255,255), inset 0 -0.5vw rgb(120,120,120), inset 0.5vw 0 rgb(255,255,255), 0.5vw 0.5vw rgb(0 0 0 / 25%);
+    text-shadow: 0.25vw 0.25vw 0 rgb(0 0 0 / 25%);
 }
 
 .navContent button {
@@ -207,8 +203,8 @@ ul {
     border: 0.6vh black solid;
     color: white;
     background: rgb(200,0,0);
-    box-shadow: inset -0.25em 0 rgb(120,0,0), inset 0 0.25em rgb(255,0,0), inset 0 -0.25em rgb(120,0,0), inset 0.25em 0 rgb(255,0,0), 0.25em 0.25em rgb(0 0 0 / 25%);
-    text-shadow: 0.15em 0.15em 0 rgb(0 0 0 / 25%);
+    box-shadow: inset -0.5vw 0 rgb(120,0,0), inset 0 0.5vw rgb(255,0,0), inset 0 -0.5vw rgb(120,0,0), inset 0.5vw 0 rgb(255,0,0), 0.5vw 0.5vw rgb(0 0 0 / 25%);
+    text-shadow: 0.25em 0.25em 0 rgb(0 0 0 / 25%);
 }
 
 /* Lists inside the dropdown */
@@ -232,12 +228,13 @@ h1 {
     font-family: 'Press Start 2P', cursive;
     font-size: 7vw;
     text-align: center;
+    text-shadow: 0.5vw 0.5vw 0 rgb(0 0 0 / 25%);
 }
 
 .subheading {
     text-align: center;
     font-size: 2vw;
-    color: gray;
+    color: rgb(150,150,150);
 }
 
 
@@ -246,7 +243,9 @@ h1 {
 
 .slideshow {
     width: 100%;
-    filter: drop-shadow(-0.5vw 0.5vw 0.25vw rgba(0,0,0,0));
+    height: 100%;
+    filter: drop-shadow(1vw 1vw rgb(0 0 0 / 25%));
+    background-color: black;
 }
 
 .slideImg {
@@ -260,18 +259,20 @@ h1 {
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    padding: 1vw;
-    color: black;
-    background-color: white;
-    border: 0.5vw black solid;
+    top: 33%;
+    padding: 0 2%;
+    color: white;
+    background: rgb(200,0,0);
+    box-shadow: inset -0.5vw 0 rgb(120,0,0), inset 0 0.5vw rgb(255,0,0), inset 0 -0.5vw rgb(120,0,0), inset 0.5vw 0 rgb(255,0,0), 0.5vw 0.5vw rgb(0 0 0 / 25%);
+    text-shadow: 0.25vw 0.25vw 0 rgb(0 0 0 / 25%);
+    border: 1vh black solid;
     font-weight: bold;
     font-size: 7vw;
     text-decoration: none;
 }
 
 .prev:hover, .next:hover {
-    font-size: 8vw;
+    border: 1vh white solid;
 }
 
 .next {
@@ -281,6 +282,13 @@ h1 {
 .active, .dot:hover {
     background-color: red;
     color: inherit;
+}
+
+.slideText {
+    font-size: 2vw;
+    color: white;
+    margin: 1vw 0;
+    text-align: center;
 }
 
 
@@ -295,16 +303,22 @@ h1 {
 .siteButton {
     width: 20vw;
     font-size: 2vw;
-    border: 0.25vw white solid;
+    font-family: 'Press Start 2P', cursive;
+    padding: 2vh 0;
+    border: 0.75vh black solid;
+    background: rgb(200,200,200);
+    color: white;
+    box-shadow: inset -0.5vw 0 rgb(120,120,120), inset 0 0.5vw rgb(255,255,255), inset 0 -0.5vw rgb(120,120,120), inset 0.5vw 0 rgb(255,255,255), 0.5vw 0.5vw rgb(0 0 0 / 25%);
+    text-shadow: 0.25vw 0.25vw 0 rgb(0 0 0 / 25%);
+    transition: none;
+}
+
+.siteButton:hover {
+    border: 0.75vh white solid;
 }
 
 .thisSite {
-    background-color: lightgray;
-    text-decoration: underline;
-}
-
-.siteButton:hover { /* turns black when hover because of invert value */
-    background-color: white;
+    color: rgb(235,235,200);
 }
 
 
@@ -315,16 +329,18 @@ h2 {
     text-align: center;
     font-family: 'Press Start 2P', cursive;
     font-size: 1.8vw;
+    text-shadow: 0.5vw 0.5vw 0 rgb(0 0 0 / 25%);
 }
 
 h3 {
     font-family: 'Press Start 2P', cursive;
+    text-shadow: 0.5vw 0.5vw 0 rgb(0 0 0 / 25%);
 }
 
 .contentText {
     line-height: 2em;
     font-size: 1.5vw;
-    color: dimgray;
+    color: rgb(150,150,150);
 }
 
 .topText {
@@ -372,10 +388,12 @@ footer {
     font-family: 'Press Start 2P', cursive;
     border: 1vh black solid;
     background-color: white;
+    box-shadow: 0.5vw 0.5vw rgb(0 0 0 / 25%);
 }
 
 .toTopButton:hover {
     height: 100%;
+    filter: invert(100%);
 }
 
 .nonJavascriptBtn {
@@ -395,28 +413,8 @@ footer {
 /* A s i d e */
 
 aside {
-    background: url("../img/night_sky_1.gif");
-}
-
-
-
-/* S i t e   s p e c i f i c   b a c k g r o u n d   i m a g e s */
-
-.siteOneHeaderBackground {
-    background: url("../img/no-cc-background6.gif") repeat;
-}
-
-.siteOneBackground {
-    background: url("../img/no-cc-background7.gif") repeat;
-}
-
-.siteTwoHeaderBackground {
-    background: url("../img/wuv_block_9.png") repeat;
-}
-
-.siteTwoBackground {
-    background: url("../img/wuv_block_9.png") repeat;
-    filter: brightness(103%);
+    background: url("../img/wuv_block_2.png");
+    filter: grayscale(100%);
 }
 
 
@@ -425,7 +423,7 @@ aside {
 
 audio {
     background-color: rgb(241, 243, 244);
-    border: 0.25vw black solid;
+    border: 0.5vw black solid;
     width: 100%;
 }
 
@@ -476,9 +474,47 @@ li {
         margin: 0 1vw;
     }
 
+    .slideshow {
+        filter: drop-shadow(3vw 3vw rgb(0 0 0 / 25%));
+    }
+
     .siteButton {
         width: 27vw;
-        font-size: 7vw;
+        font-size: 4vw;
+        box-shadow: inset -1.5vw 0 rgb(120,120,120), inset 0 1.5vw rgb(255,255,255), inset 0 -1.5vw rgb(120,120,120), inset 1.5vw 0 rgb(255,255,255), 1.5vw 1.5vw rgb(0 0 0 / 25%);
+        text-shadow: 0.75vw 0.75vw 0 rgb(0 0 0 / 25%);
+    }
+
+    .prev, .next {
+        border: 0.5vh black solid;
+        font-size: 10vw;
+        box-shadow: inset -1.5vw 0 rgb(120,0,0), inset 0 1.5vw rgb(255,0,0), inset 0 -1.5vw rgb(120,0,0), inset 1.5vw 0 rgb(255,0,0), 1.5vw 1.5vw rgb(0 0 0 / 25%);
+        text-shadow: 0.75vw 0.75vw 0 rgb(0 0 0 / 25%);
+    }
+
+    .alternativeHeaderBtn {
+        box-shadow: inset -1.5vw 0 rgb(120,0,0), inset 0 1.5vw rgb(255,0,0), inset 0 -1.5vw rgb(120,0,0), inset 1.5vw 0 rgb(255,0,0), 1.5vw 1.5vw rgb(0 0 0 / 25%);
+        color: white;
+        text-shadow: 0.75vw 0.75vw 0 rgb(0 0 0 / 25%);
+    }
+
+    .headerImg {
+        filter: drop-shadow(1.5vw 1.5vw rgb(0 0 0 / 25%));
+    }
+
+    .menuContent button {
+        box-shadow: inset -1.5vw 0 rgb(120,120,120), inset 0 1.5vw rgb(255,255,255), inset 0 -1.5vw rgb(120,120,120), inset 1.5vw 0 rgb(255,255,255), 1.5vw 1.5vw rgb(0 0 0 / 25%);
+        text-shadow: 0.3vw 0.3vw 0 rgb(0 0 0 / 25%);
+    }
+
+    .navContent button {
+        box-shadow: inset -1.5vw 0 rgb(120,0,0), inset 0 1.5vw rgb(255,0,0), inset 0 -1.5vw rgb(120,0,0), inset 1.5vw 0 rgb(255,0,0), 1.5vw 1.5vw rgb(0 0 0 / 25%);
+        text-shadow: 0.3em 0.3em 0 rgb(0 0 0 / 25%);
+    }
+
+    .slideText {
+        font-size: 3vw;
+        margin: 1vw 0 3vw 0;
     }
 
     .nonJavascriptBtn {
@@ -494,10 +530,19 @@ li {
     .toTopButton {
         margin: 0 auto 100% auto;
         border: 2vw black solid;
+        width: 50vw;
     }
 
     .subheading {
         font-size: 4vw;
+    }
+
+
+
+    /* A u d i o   s i t e */
+
+    audio {
+        border: 2vw black solid;
     }
 
 
@@ -529,6 +574,8 @@ li {
         font-size: 5vw;
     }
 }
+
+
 
 @media (min-width:540px) {
     .hiddenWhenBig {
