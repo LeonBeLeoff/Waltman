@@ -262,7 +262,7 @@ h1 {
 
 .prev, .next {
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     top: 33%;
     padding: 0 2%;
     color: white;
