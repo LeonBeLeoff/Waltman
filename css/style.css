@@ -16,7 +16,7 @@ font-family: 'Press Start 2P', cursive;
 }
 
 body {
-    background: url("../img/wuv_bg1.2.png");
+    background: url("../img/wuv_bg1.2.webp");
 }
 
 .interactable {
@@ -422,7 +422,7 @@ footer {
 /* A s i d e */
 
 aside {
-    background: url("../img/wuv_block_2.png");
+    background: url("../img/wuv_block_2.webp");
     filter: grayscale(100%);
 }
 
